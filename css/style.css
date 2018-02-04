@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    background-color: black;
+    font-size: 10px;
+}
+
+.star{
+    position: absolute;
+    width: .1rem;
+    height: .1rem;
+    background-color: white;
+}
+
+.intro{
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    z-index: 1;
+    animation: intro 5s ease-out 1s;
+    color: rgb(5, 97, 189); /* Color picked from original (1977) video */
+    font-weight: 400;
+    font-size: 300%; 
+    opacity: 0;   
+}
+
+.logo{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    z-index: 1;
+    margin: auto;
+    animation: logo 8s ease-out 9s;
+    opacity: 0;
+}
+
+.logo img{
+    width: inherit;
+}
+
+/* Animations */
+@keyframes intro{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    40%{
+        opacity: 1;
+    }    
+    80%{
+        opacity: 1;
+    }   
+    95%{
+        opacity: 0;
+    }    
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes logo{
+    0%{
+        width: 16rem;
+        transform: scale(2.75);
+        opacity: 1;
+    }
+    50%{
+        width: 16rem;
+        opacity: 0;
+    }
+    100%{
+        widows: 16rem;
+        opacity: 0;
+        transform: scale(0.1);
+    }
+}

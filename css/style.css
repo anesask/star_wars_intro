@@ -16,10 +16,13 @@ body{
     top: 45%;
     left: 35%;
     z-index: 1;
+    font-family: news-gothic-std, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .1rem .1rem rgba(4, 55, 102, 0.5);
     animation: intro 5s ease-out 1s;
     color: rgb(5, 97, 189); /* Color picked from original (1977) video */
-    font-weight: 400;
-    font-size: 300%; 
+    font-size: 400%; 
     opacity: 0;   
 }
 
@@ -29,12 +32,53 @@ body{
     left: 40%;
     z-index: 1;
     margin: auto;
-    animation: logo 8s ease-out 9s;
+    animation: logo 9s ease-out 9s;
     opacity: 0;
 }
 
 .logo img{
     width: inherit;
+}
+
+p{
+    color: #ffd700; /* Hand picked */
+}
+
+.board{
+    font-family: news-gothic-std, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    transform: perspective(30rem) rotateX(25deg);
+    transform-origin: 50% 100%;
+    text-align: justify;
+    position: absolute;
+    margin-left: -9rem;
+    font-weight: bold;
+    overflow: hidden;
+    font-size: 350%;
+    height: 50rem;
+    width: 20rem;
+    bottom: 0;
+    left: 50%;
+}
+
+.board:after{
+    position: absolute;
+    contain: ' ';
+    bottom: 60%;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.content{
+    animation: scroll 100s linear 16s;
+    position: absolute;
+    top: 100%;
+}
+
+.title, .subtitle{
+    text-align: center;
 }
 
 /* Animations */
@@ -61,17 +105,26 @@ body{
 
 @keyframes logo{
     0%{
-        width: 16rem;
+        width: 18rem;
         transform: scale(2.75);
         opacity: 1;
     }
     50%{
-        width: 16rem;
+        width: 18rem;
         opacity: 0;
     }
     100%{
-        widows: 16rem;
+        widows: 18rem;
         opacity: 0;
         transform: scale(0.1);
     }
+}
+
+@keyframes scroll{
+    0%{
+        top: 100%;
+    }
+    100%{
+        top: -170%;
+    }    
 }

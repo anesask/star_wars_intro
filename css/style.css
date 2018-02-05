@@ -45,10 +45,10 @@ p{
 }
 
 .board{
-    font-family: news-gothic-std, sans-serif;
+    font-family: Verdana, Geneva, sans-serif;
     font-style: normal;
     font-weight: 700;
-    transform: perspective(30rem) rotateX(25deg);
+    transform: perspective(30rem) rotateX(27deg);
     transform-origin: 50% 100%;
     text-align: justify;
     position: absolute;
@@ -57,9 +57,9 @@ p{
     overflow: hidden;
     font-size: 350%;
     height: 50rem;
-    width: 20rem;
+    width: 50%;
     bottom: 0;
-    left: 50%;
+    left: 35%;
 }
 
 .board:after{
@@ -79,6 +79,7 @@ p{
 
 .title, .subtitle{
     text-align: center;
+    word-spacing: .5rem;
 }
 
 /* Animations */
